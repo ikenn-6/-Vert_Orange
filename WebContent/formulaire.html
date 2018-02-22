@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>VertOrangé</title>
+        <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="styleVO.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="orange formIk" style="background-image:none;">
+        <h1 class="titre">Formulaire de contact</h1>
+        <form action="" method="get">
+            <label>
+                Entrez votre adresse email : <input type="email" name="courriel" />
+            </label>
+        </form><br>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <label for="Mailsup">Entrez l'adresse email  de la personne a qui vous voulez envoyez le message :<input type="text" name="proposition1" /><br />
+
+
+
+            <div id="nouveau_input"></div>
+
+            <input type="button" onclick="nouveauInput()" value="ajouter une nouvelle adresse mail"/>   
+
+            <select class="autre">
+                <option value="volvo">Prix</option>
+                <option value="saab">Réclamation</option>
+                <option value="opel">Général</option>
+            </select>     
+
+            <br><input class="agrandir" type="email" name="courriel"/>
+            <br><button class="envoyer "type="button" onclick="alert('Votre message a été envoyé avec succès')">Envoyer</button>
+            <script type="text/javascript">
+
+
+                var i = 1
+                var contenu = ""
+
+                function nouveauInput() {
+
+                    if (i < 5) {
+
+
+                        i = i + 1;
+                        contenu = contenu + "<label for='proposition" + i + "'>Mail sup " + i + " <input type='text' name='proposition" + i + "' /><br />";
+                        document.getElementById('nouveau_input').innerHTML = contenu;
+
+                    }
+                }
+
+
+            </script>
+    </body>
+</html>
+
